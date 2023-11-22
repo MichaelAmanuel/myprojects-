@@ -67,14 +67,27 @@
 # solution_instance.checkPerfectNumber(num)
 # # print(result)
 
-n = 100
-out_put = ''
-while n != 0:
-    dig = n % 7
-    out_put = str(dig) + out_put
-    n = n // 7
+# n = 100
+# out_put = ''
+# while n != 0:
+#     dig = n % 7
+#     out_put = str(dig) + out_put
+#     n = n // 7
+#
+# print(out_put)
 
-print(out_put)
+s = "a-bC-dEf-ghIj"
+d = ''
+
+for i, j in zip(range(len(s)-1, -1, -1), s):
+    if j == '-':
+        d = d + j
+        if s[i] != '-':
+            d = d + s[i]
+    else:
+        d = d + s[i]
+
+print(d)
 
 
 
@@ -85,9 +98,7 @@ print(out_put)
 
 
 
-
-
-
+"j-Ih-gfE-dCba"
 
 
 
