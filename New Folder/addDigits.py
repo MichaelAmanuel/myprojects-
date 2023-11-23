@@ -76,38 +76,75 @@
 #
 # print(out_put)
 
-s = "a-bC-dEf-ghIj"
-d = ''
-
-for i, j in zip(range(len(s)-1, -1, -1), s):
-    if j == '-':
-        d = d + j
-        if s[i] != '-':
-            d = d + s[i]
-    else:
-        d = d + s[i]
-
-print(d)
-
-
-
-
+# s = "a-bC-dEf-ghIj"
+# d = ''
+#
+# for i, j in zip(range(len(s)-1, -1, -1), s):
+#     if j == '-':
+#         d = d + j
+#         if s[i] != '-':
+#             d = d + s[i]
+#     else:
+#         d = d + s[i]
+#
+# print(d)
+#
+# "j-Ih-gfE-dCba"
 
 
+# nums = [-1,0,3,5,9,12]
+# target = 2
+# class Solution(object):
+#     def search(self, nums, target):
+#
+#         for i in nums:
+#             if i == target:
+#                 return nums.index(i)
+#         return -1
+#
+# solution = Solution()
+# nums = [-1, 0, 3, 5, 9, 12]
+# target = 9
+# result = solution.search(nums, target)
+# print(result)
 
 
+# class Solution(object):
+#     def hasGroupsSizeX(self, deck):
+#
+#         if len(deck) % 2 != 0:
+#             return False
+#         for i in deck:
+#             count = 0
+#             for j in deck:
+#                 if i == j:
+#                     count += 1
+#             if count != 2:
+#                 return False
+#         return True
+#
+# solution = Solution()
+# deck = [1]
+# result = solution.hasGroupsSizeX(deck)
+# print(result)
+class Solution(object):
+    def fib(self, n):
+        a, b = 0, 1
+        if n == 0:
+            return a
+        elif n == 1:
+            return b
+        for i in range(2, n + 1):
+            c = a + b
+            a = b
+            b = c
 
+        return c
 
-"j-Ih-gfE-dCba"
-
-
-
-
-
-
-
-
-
+solution = Solution()
+n = 1
+result = solution.fib(n)
+print(result)
 
 
 
