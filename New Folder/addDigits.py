@@ -127,32 +127,77 @@
 # deck = [1]
 # result = solution.hasGroupsSizeX(deck)
 # print(result)
-class Solution(object):
-    def fib(self, n):
-        a, b = 0, 1
-        if n == 0:
-            return a
-        elif n == 1:
-            return b
-        for i in range(2, n + 1):
-            c = a + b
-            a = b
-            b = c
+# class Solution(object):
+#     def fib(self, n):
+#         a, b = 0, 1
+#         if n == 0:
+#             return a
+#         elif n == 1:
+#             return b
+#         for i in range(2, n + 1):
+#             c = a + b
+#             a = b
+#             b = c
+#
+#         return c
+#
+# solution = Solution()
+# n = 1
+# result = solution.fib(n)
+# print(result)
 
-        return c
+# class Solution(object):
+#     def dayOfYear(self, date):
+#         num = int(date.split('-')[0])
+#         if (num % 4 == 0 and num % 100 != 0) or (num % 400 == 0):
+#             days_in_year = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#             num = int(date.split('-')[1])
+#             sum_days = 0
+#             if num < 2:
+#                 sum_days = int(date.split('-')[2])
+#             else:
+#                 for i in range(num-1):
+#                     sum_days += days_in_year[i]
+#                 sum_days += int(date.split('-')[2])
+#         else:
+#             days_in_year = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#             num = int(date.split('-')[1])
+#             sum_days = 0
+#             if num < 2:
+#                 sum_days = int(date.split('-')[2])
+#             else:
+#                 for i in range(num - 1):
+#                     sum_days += days_in_year[i]
+#                 sum_days += int(date.split('-')[2])
+#
+#         return sum_days
+#
+#
+# solution = Solution()
+# date = "1900-05-02"
+# result = solution.dayOfYear(date)
+# print(result)
+#
+
+class Solution(object):
+
+    def maximum69Number (self, num):
+        digits = [int(digit) for digit in num]
+        # digits = str(digit)
+        for i, j in zip(digits, range(len(digits))):
+            if i == 6:
+                digits[j] = j
+                return digits
+
 
 solution = Solution()
-n = 1
-result = solution.fib(n)
+num = 9669
+result = solution.maximum69Number(num)
 print(result)
 
-
-
-
-
-
-
-
+# str_num = str(num)
+# for i in range(len(str_num)):
+#   print(str_num[i])
 
 
 
